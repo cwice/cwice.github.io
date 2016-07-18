@@ -1,28 +1,56 @@
+<!DOCTYPE html>
 <html>
 <head>
-    <title>Clicker de 2016</title>
+<title> Blobspire - Let's change the world 
+</title>
+<style>
+body {
+    font-size: 100%;
+}
+
+h1 {
+    font-size: 5em;
+}
+
+h2 {
+    font-size: 3em;
+}
+
+p {
+    font-size: 2.1em;
+	text-align: center;
+	font-weight: bold;
+}
+</style>
 </head>
+<!-- <body style="background-color:powderblue;"> -->
 
-<body>
+<h1 align="center">Welcome to Blobspire!</h1>
+<h2 align="center">Relax, Inspire, Learn</h2>
 
-<div style=“background-color:green; color:blue; padding:20px;”>
-</div>
+<input type="image" src="greenArrowClipart.png" onclick="blobNumber()" width="200" height="200" align="left"/>
+<input type="image" src="redXClipart.png" onclick="history.go(0)" align="right" width="200" height="200" />
 
-<input name=“nameUser” type=“text” placeholder=“Enter_name” maxlength=“20” style=“width:194px; max-width:194px;”>
+<script>
+function blobNumber() {
+	var number = Math.floor((Math.random() * 2) + 1); 
 
+	switch (number) {
+    case 1:
+        var top = "Hard work beats talent, when talent doesn't work hard. <br> - Kevin Durant";
+        break;
+    case 2:
+        var top = "More coming soon...";
+        break;
+    }
+document.getElementById("topText").innerHTML = top;
 
-<p>Welcome . . . Click Away!</p>
+}
+</script>
 
-    <script type="text/javascript">
-    var click = 0;
-    function onClick() {
-	<body bgcolor="#rrbbbb">
-        click += 1;
-        document.getElementById("click").innerHTML = click;
-    };
-    </script>
-    <button type="button" onClick="onClick()">Click me</button>
-    <p>Clicks: <a id="click">0</a></p>
+<br>
+<br>
+<p id="topText"></p>
 
 </body>
 </html>
